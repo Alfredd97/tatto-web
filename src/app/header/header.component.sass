@@ -1,8 +1,17 @@
+$header-color: white
+$header-letter-color: black
+
+
+@mixin theme($theme: DarkGray)
+  background: $theme
+  box-shadow: 0 0 1px rgba($theme, .25)
+  color: #fff
 
 
 header
   padding: 10px
-  background: #02534d
+  background: $header-color
+
 
 
 .logo
@@ -11,7 +20,7 @@ header
   &:hover
     cursor: pointer
 
-.desktop-menu
+.desktop_menu
   margin-top: 24px
 
   ul
@@ -20,7 +29,7 @@ header
 
   ul li
     list-style-type: none
-    color: white
+    color: $header-letter-color
     display: inline-block
     font-size: 18px
     margin-left: 26px
@@ -37,31 +46,32 @@ header
 
 
 @media screen and (min-width:128px) and (max-width: 900px)
-  .desktop-menu
+  .desktop_menu
     position: fixed
     right: 0
     transition: 0.4s ease-in-out
     top: 64px
-    background: #02534d
+    background: $header-color
     width: 280px
     height: 100%
 
-  ul li
-    display: block
-    text-align: left
-    margin: 0
-    padding: 10px 0 10px 26px
-    border-bottom: 1px solid grey
+    ul li
+      display: block
+      text-align: left
+      margin: 0
+      padding: 10px 0 10px 26px
+      border-bottom: 1px solid grey
 
   .menu-icon
     display: block
-    color: white
+    color: $header-letter-color
     font-size: 40px
     padding-top: 10px
 
   .mobile-menu
     right: 0
     transition: 0.4s ease-in-out
+
 
 
 
