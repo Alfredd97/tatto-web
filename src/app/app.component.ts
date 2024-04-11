@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { Router } from 'express';
 import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { CommonModule } from '@angular/common';
     HomeComponent,
     CommonModule,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
