@@ -1,23 +1,49 @@
 
+@if (artist.id % 2 === 0) {
 <div class="flex justify-center">
-<div class="w-1/2 rounded overflow-hidden shadow-lg content-center items-center">
-  <div class="flex">
+<div @slideIn class="w-full mx-20 rounded overflow-hidden shadow-lg content-center items-center animate-fadeIn">
+  <div class="flex justify-center items-center">
     <div class="w-1/2">
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">{{artist.name}}</div>
-        <p class="text-gray-700 text-base">
+        <div class="font-bold text-5xl mb-2 text-white">{{artist.name}}</div>
+        <p class="text-white text-base">
           {{artist.description}}
         </p>
       </div>
-      <div class="px-6 py-4">
+      <div class="flex items-center justify-center px-6 py-4">
         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Instagram</span>
         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">GMail</span>
         <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Facebook</span>
       </div>
     </div>
     <div class="w-1/2">
-      <img class="w-full" src="image-url.jpg" alt="Card Image">
+      <img class="w-full px-10 mt-10 mb-10" src="../../../assets/Artists/{{artist.id}}.jpg" alt="Card Image">
     </div>
   </div>
 </div>
 </div>
+}
+@else {
+  <div class="flex justify-center">
+    <div @slideIn class="w-full mx-20 rounded overflow-hidden shadow-lg content-center items-center animate-fadeIn">
+      <div class="flex justify-center items-center">
+        <div class="w-1/2">
+          <img class="w-full px-10 mt-10 mb-10" src="../../../assets/Artists/{{artist.id}}.jpg" alt="Card Image">
+        </div>
+        <div class="w-1/2">
+          <div class="px-6 py-4">
+            <div class="font-bold text-5xl mb-2 text-white">{{artist.name}}</div>
+            <p class="text-white text-base">
+              {{artist.description}}
+            </p>
+          </div>
+          <div class="flex items-center justify-center px-6 py-4">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Instagram</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">GMail</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Facebook</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+}
